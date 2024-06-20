@@ -3,27 +3,184 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --color-primary-100: "#d4ced9",
+    --color-primary-200: "#a99cb3",
+    --color-primary-300: "#7e6b8e",
+    --color-primary-400: "#533968",
+    --color-primary-500: "#280842",
+    --color-primary-600: "#200635",
+    --color-primary-700: "#180528",
+    --color-primary-800: "#10031a",
+    --color-primary-900: "#08020d"
+
+    --color-secondary-100: "#e0cdf0",
+    --color-secondary-200: "#c19be1",
+    --color-secondary-300: "#a369d1",
+    --color-secondary-400: "#8437c2",
+    --color-secondary-500: "#6505b3",
+    --color-secondary-600: "#51048f",
+    --color-secondary-700: "#3d036b",
+    --color-secondary-800: "#280248",
+    --color-secondary-900: "#140124"
+
+    --color-third-100: "#fefefe",
+    --color-third-200: "#fdfdfe",
+    --color-third-300: "#fcfbfd",
+    --color-third-400: "#fbfafd",
+    --color-third-500: "#faf9fc",
+    --color-third-600: "#c8c7ca",
+    --color-third-700: "#969597",
+    --color-third-800: "#646465",
+    --color-third-900: "#323232"
+
+    --color-text-100: "#fbfafb",
+    --color-text-200: "#f6f5f7",
+    --color-text-300: "#f2eff4",
+    --color-text-400: "#edeaf0",
+    --color-text-500: "#e9e5ec",
+    --color-text-600: "#bab7bd",
+    --color-text-700: "#8c898e",
+    --color-text-800: "#5d5c5e",
+    --color-text-900: "#2f2e2f"
+
+    --color-bg-100: "#ceccd0",
+    --color-bg-200: "#9d99a1",
+    --color-bg-300: "#6d6672",
+    --color-bg-400: "#3c3343",
+    --color-bg-500: "#0b0014",
+    --color-bg-600: "#090010",
+    --color-bg-700: "#07000c",
+    --color-bg-800: "#040008",
+    --color-bg-900: "#020004"
+
+    --color-accent-100: "#d8f2eb",
+    --color-accent-200: "#b1e5d8",
+    --color-accent-300: "#8ad7c4",
+    --color-accent-400: "#63cab1",
+    --color-accent-500: "#3cbd9d",
+    --color-accent-600: "#30977e",
+    --color-accent-700: "#24715e",
+    --color-accent-800: "#184c3f",
+    --color-accent-900: "#0c261f"
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --color-primary-100: "#e0cdf0";
+    --color-primary-200: "#c19be1";
+    --color-primary-300: "#a369d1";
+    --color-primary-400: "#8437c2";
+    --color-primary-500: "#6505b3";
+    --color-primary-600: "#51048f";
+    --color-primary-700: "#3d036b";
+    --color-primary-800: "#280248";
+    --color-primary-900: "#140124";
+
+    --color-secondary-100: "#f4e6ff";
+    --color-secondary-200: "#e9cdff";
+    --color-secondary-300: "#ddb5ff";
+    --color-secondary-400: "#d29cff";
+    --color-secondary-500: "#c783ff";
+    --color-secondary-600: "#9f69cc";
+    --color-secondary-700: "#774f99";
+    --color-secondary-800: "#503466";
+    --color-secondary-900: "#281a33";
+
+    --color-third-100: "#d0ced2";
+    --color-third-200: "#a29da5";
+    --color-third-300: "#736d78";
+    --color-third-400: "#453c4b";
+    --color-third-500: "#160b1e";
+    --color-third-600: "#120918";
+    --color-third-700: "#0d0712";
+    --color-third-800: "#09040c";
+    --color-third-900: "#040206";
+
+    --color-text-100: "#cdccce";
+    --color-text-200: "#9c999e";
+    --color-text-300: "#6a666d";
+    --color-text-400: "#39333d";
+    --color-text-500: "#07000c";
+    --color-text-600: "#06000a";
+    --color-text-700: "#040007";
+    --color-text-800: "#030005";
+    --color-text-900: "#010002";
+
+    --color-bg-100: "#f8fafb";
+    --color-bg-200: "#f2f4f7";
+    --color-bg-300: "#ebeff3";
+    --color-bg-400: "#e5e9ef";
+    --color-bg-500: "#dee4eb";
+    --color-bg-600: "#b2b6bc";
+    --color-bg-700: "#85898d";
+    --color-bg-800: "#595b5e";
+    --color-bg-900: "#2c2e2f";
+
+    --color-accent-100: "#d3ece6";
+    --color-accent-200: "#a7d9cd";
+    --color-accent-300: "#7ac6b3";
+    --color-accent-400: "#4eb39a";
+    --color-accent-500: "#22a081";
+    --color-accent-600: "#1b8067";
+    --color-accent-700: "#14604d";
+    --color-accent-800: "#0e4034";
+    --color-accent-900: "#07201a";
   }
+
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--color-text);
+  background: var(--color-bg-400);
+  font-family: var(--font-mont);
+}
+
+@layer base {
+
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-josefin);
+    line-height: 1;
+    font-weight: 600;
+    font-size: xx-large;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-weight: 100;
+    font-family: var(--font-mont);
+    font-size: larger;
+  }
+
+  p {
+    font-size: medium;
+    font-weight: normal;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded-md py-2 px-4 font-medium ring-2 mr-4 text-balance capitalize translate-y-2;
+  }
+
+  .btn:hover {
+    @apply mix-blend-exclusion ring-2 cursor-auto translate-y-0 transition ease-in-out duration-300;
+  }
+
+  .btn-primary {
+    @apply ring-accent text-accent;
+  }
+
+  .btn-secondary {
+    @apply bg-bgCol ring-transparent text-secondary;
+  }
+
+  .glass-morph {
+    @apply bg-clip-padding backdrop-filter backdrop-blur-md;
+  }
 }
 
 @layer utilities {
