@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 :root {
+  --color-primary: "#280842",
+    --color-secondary:"#6505B3",
+    --color-third:"#FAF9FC",
+    --color-text:"#E9E5EC",
+    --color-bg:"#0E0814",
+    -color-accent:"#3CBD9D",
+
     --color-primary-100: "#d4ced9",
     --color-primary-200: "#a99cb3",
     --color-primary-300: "#7e6b8e",
@@ -66,7 +73,14 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --color-primary-100: "#e0cdf0";
+    --color-primary: "#6505B3",
+      --color-secondary:"#C783FF",
+      --color-third:"#160B1E",
+      --color-text:"#160B1E",
+      --color-bg:"#DEE4EB",
+      -color-accent:"#22A081",
+
+      --color-primary-100: "#e0cdf0";
     --color-primary-200: "#c19be1";
     --color-primary-300: "#a369d1";
     --color-primary-400: "#8437c2";
@@ -137,7 +151,6 @@ body {
 
 @layer base {
 
-
   h1,
   h2,
   h3 {
@@ -178,7 +191,7 @@ body {
     @apply bg-bgCol ring-transparent text-secondary;
   }
 
-  .glass-morph {
+  .glassmorph {
     @apply bg-clip-padding backdrop-filter backdrop-blur-md;
   }
 }

@@ -32,6 +32,13 @@ module.exports = withMT({
     },
 
     colors: {
+      primary: "var(--color-primary)",
+      secondary: "var(--color-secondary)",
+      third: "var(--color-third)",
+      textCol: "var(--color-text)",
+      bgCol: "var(--color-bg)",
+      accent: "var(--color-accent)",
+
       primary: {
         100: "var(--color-primary-100)",
         200: "var(--color-primary-200)",
@@ -41,7 +48,7 @@ module.exports = withMT({
         600: "var(--color-primary-600)",
         700: "var(--color-primary-700)",
         800: "var(--color-primary-800)",
-        900: "var(--color-primary-900)"
+        900: "var(--color-primary-900)",
       },
       secondary: {
         100: "var(--color-secondary-100)",
@@ -52,7 +59,7 @@ module.exports = withMT({
         600: "var(--color-secondary-600)",
         700: "var(--color-secondary-700)",
         800: "var(--color-secondary-800)",
-        900: "var(--color-secondary-900)"
+        900: "var(--color-secondary-900)",
       },
       third: {
         100: "var(--color-third-100)",
@@ -63,9 +70,9 @@ module.exports = withMT({
         600: "var(--color-third-600)",
         700: "var(--color-third-700)",
         800: "var(--color-third-800)",
-        900: "var(--color-third-900)"
+        900: "var(--color-third-900)",
       },
-      text: {
+      textCol: {
         100: "var(--color-text-100)",
         200: "var(--color-text-200)",
         300: "var(--color-text-300)",
@@ -74,9 +81,9 @@ module.exports = withMT({
         600: "var(--color-text-600)",
         700: "var(--color-text-700)",
         800: "var(--color-text-800)",
-        900: "var(--color-text-900)"
+        900: "var(--color-text-900)",
       },
-      bg: {
+      bgCol: {
         100: "var(--color-bg-100)",
         200: "var(--color-bg-200)",
         300: "var(--color-bg-300)",
@@ -85,7 +92,7 @@ module.exports = withMT({
         600: "var(--color-bg-600)",
         700: "var(--color-bg-700)",
         800: "var(--color-bg-800)",
-        900: "var(--color-bg-900)"
+        900: "var(--color-bg-900)",
       },
       accent: {
         100: "var(--color-accent-100)",
@@ -96,35 +103,34 @@ module.exports = withMT({
         600: "var(--color-accent-600)",
         700: "var(--color-accent-700)",
         800: "var(--color-accent-800)",
-        900: "var(--color-accent-900)"
+        900: "var(--color-accent-900)",
       },
       current: "currentColor",
     },
 
-      lightShade: {
-        50: "#fdfcfd",
-        100: "#f8f7f9",
-        200: "#f5f3f6",
-        300: "#f0eef2",
-        400: "#edeaf0",
-        500: "#e9e5ec",
-        600: "#d4d0d7",
-        700: "#a5a3a8",
-        800: "#807e82",
-        900: "#626063",
-      },
-      darkShade: {
-        50: "#e8e7e9",
-        100: "#b7b3b9",
-        200: "#948f98",
-        300: "#635c68",
-        400: "#453c4b",
-        500: "#160b1e",
-        600: "#140a1b",
-        700: "#100815",
-        800: "#0c0611",
-        900: "#09050d",
-      },
+    lightShade: {
+      50: "#fdfcfd",
+      100: "#f8f7f9",
+      200: "#f5f3f6",
+      300: "#f0eef2",
+      400: "#edeaf0",
+      500: "#e9e5ec",
+      600: "#d4d0d7",
+      700: "#a5a3a8",
+      800: "#807e82",
+      900: "#626063",
+    },
+    darkShade: {
+      50: "#e8e7e9",
+      100: "#b7b3b9",
+      200: "#948f98",
+      300: "#635c68",
+      400: "#453c4b",
+      500: "#160b1e",
+      600: "#140a1b",
+      700: "#100815",
+      800: "#0c0611",
+      900: "#09050d",
     },
 
     extend: {
