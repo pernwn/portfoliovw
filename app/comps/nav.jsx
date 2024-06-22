@@ -1,9 +1,16 @@
+import Link from 'next/link'
 import React from 'react'
 
-const nav = () => {
+const Nav = () => {
   return (
-    <div>nav</div>
-  )
+    <div>
+      <Link href="/">Home</Link>
+      <Link href="/about">About</Link>
+      <Link href="/contact">Contact</Link>
+      <Link href="/portfolio">Portfolio</Link>
+   
+    </div>
+  );
 }
 
-export default nav
+export default Nav

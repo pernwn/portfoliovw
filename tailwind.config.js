@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-import withMT from "@material-tailwind/react/utils/withMT";
 
-module.exports = withMT({
+module.exports = {
+darkMode:"class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -32,19 +32,18 @@ module.exports = withMT({
     },
 
     colors: {
-      primary: "var(--color-primary)",
-      secondary: "var(--color-secondary)",
-      third: "var(--color-third)",
-      textCol: "var(--color-text)",
-      bgCol: "var(--color-bg)",
-      accent: "var(--color-accent)",
+      // primary: 'var(--color-primary)',
+      // secondary: 'var(--color-secondary)',
+      // textCol: 'var(--color-text)',
+      // backgroundCol: 'var(--color-background)',
+      // accent: 'var(--color-accent)',
 
       primary: {
         100: "var(--color-primary-100)",
         200: "var(--color-primary-200)",
         300: "var(--color-primary-300)",
         400: "var(--color-primary-400)",
-        500: "var(--color-primary-500)",
+        DEFAULT: "var(--color-primary-500)",
         600: "var(--color-primary-600)",
         700: "var(--color-primary-700)",
         800: "var(--color-primary-800)",
@@ -55,7 +54,7 @@ module.exports = withMT({
         200: "var(--color-secondary-200)",
         300: "var(--color-secondary-300)",
         400: "var(--color-secondary-400)",
-        500: "var(--color-secondary-500)",
+        DEFAULT: "var(--color-secondary-500)",
         600: "var(--color-secondary-600)",
         700: "var(--color-secondary-700)",
         800: "var(--color-secondary-800)",
@@ -66,7 +65,7 @@ module.exports = withMT({
         200: "var(--color-third-200)",
         300: "var(--color-third-300)",
         400: "var(--color-third-400)",
-        500: "var(--color-third-500)",
+        DEFAULT: "var(--color-third-500)",
         600: "var(--color-third-600)",
         700: "var(--color-third-700)",
         800: "var(--color-third-800)",
@@ -77,60 +76,59 @@ module.exports = withMT({
         200: "var(--color-text-200)",
         300: "var(--color-text-300)",
         400: "var(--color-text-400)",
-        500: "var(--color-text-500)",
+        DEFAULT: "var(--color-text-500)",
         600: "var(--color-text-600)",
         700: "var(--color-text-700)",
         800: "var(--color-text-800)",
         900: "var(--color-text-900)",
       },
-      bgCol: {
-        100: "var(--color-bg-100)",
-        200: "var(--color-bg-200)",
-        300: "var(--color-bg-300)",
-        400: "var(--color-bg-400)",
-        500: "var(--color-bg-500)",
-        600: "var(--color-bg-600)",
-        700: "var(--color-bg-700)",
-        800: "var(--color-bg-800)",
-        900: "var(--color-bg-900)",
+      backgroundCol: {
+        100: "var(--color-background-100)",
+        200: "var(--color-background-200)",
+        300: "var(--color-background-300)",
+        400: "var(--color-background-400)",
+        DEFAULT: "var(--color-background-500)",
+        600: "var(--color-background-600)",
+        700: "var(--color-background-700)",
+        800: "var(--color-background-800)",
+        900: "var(--color-background-900)",
       },
       accent: {
         100: "var(--color-accent-100)",
         200: "var(--color-accent-200)",
         300: "var(--color-accent-300)",
         400: "var(--color-accent-400)",
-        500: "var(--color-accent-500)",
+        DEFAULT: "var(--color-accent-500)",
         600: "var(--color-accent-600)",
         700: "var(--color-accent-700)",
         800: "var(--color-accent-800)",
         900: "var(--color-accent-900)",
       },
-      current: "currentColor",
-    },
 
-    lightShade: {
-      50: "#fdfcfd",
-      100: "#f8f7f9",
-      200: "#f5f3f6",
-      300: "#f0eef2",
-      400: "#edeaf0",
-      500: "#e9e5ec",
-      600: "#d4d0d7",
-      700: "#a5a3a8",
-      800: "#807e82",
-      900: "#626063",
-    },
-    darkShade: {
-      50: "#e8e7e9",
-      100: "#b7b3b9",
-      200: "#948f98",
-      300: "#635c68",
-      400: "#453c4b",
-      500: "#160b1e",
-      600: "#140a1b",
-      700: "#100815",
-      800: "#0c0611",
-      900: "#09050d",
+      lightShade: {
+        50: "#fdfcfd",
+        100: "#f8f7f9",
+        200: "#f5f3f6",
+        300: "#f0eef2",
+        400: "#edeaf0",
+        500: "#e9e5ec",
+        600: "#d4d0d7",
+        700: "#a5a3a8",
+        800: "#807e82",
+        900: "#626063",
+      },
+      darkShade: {
+        50: "#e8e7e9",
+        100: "#b7b3b9",
+        200: "#948f98",
+        300: "#635c68",
+        400: "#453c4b",
+        500: "#160b1e",
+        600: "#140a1b",
+        700: "#100815",
+        800: "#0c0611",
+        900: "#09050d",
+      },
     },
 
     extend: {
@@ -139,16 +137,17 @@ module.exports = withMT({
         128: "32rem",
       },
 
-      variants: {
-        transitionProperty: [
-          "responsive",
-          "motion-safe",
-          "motion-reduce",
-          "hover",
-          "focus",
-        ],
-      },
+      // variants: {
+      //extend:{transitionProperty: [
+      //     "responsive",
+      //     "motion-safe",
+      //     "motion-reduce",
+      //     "hover",
+      //     "focus",
+      //   ]}
+      //   
+      // },
     },
   },
   plugins: [],
-});
+};

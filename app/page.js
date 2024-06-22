@@ -1,12 +1,14 @@
 import React from "react";
-import About from "./about/page";
+
 import Hero from "./comps/hero";
+import Nav from './comps/nav';
 
 const Page = () => {
   return (
-    <>
+    <main>
+
       <Hero />
-    </>
+    </main>
   );
 };
 

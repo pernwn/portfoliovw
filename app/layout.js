@@ -1,6 +1,7 @@
 import { Josefin_Sans, Montserrat } from "next/font/google";
-import "./globals.css";
+import './globals.css'
 import styles from "./style";
+import Nav from "./comps/nav";
 
 const josefin_Sans = Josefin_Sans({
   weight: "variable",
@@ -25,8 +26,9 @@ export default function RootLayout({ children }) {
 
         <body
           className={`${josefin_Sans.variable} ${mont.variable} ${styles.padding} mx-auto max-w-stretch overflow-x-hidden`}
-        >
-          <main>{children}</main>
+      >
+        <Nav/>
+         {children}
         </body>
 
     </html>
