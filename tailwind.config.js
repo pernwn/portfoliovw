@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+const withMT = require("@material-tailwind/react/utils/withMT");
 
-module.exports = {
+module.exports = withMT({
 darkMode:"class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,7 +10,7 @@ darkMode:"class",
   ],
   theme: {
     screens: {
-      sm: { min: "640px", max: "767px" },
+      sm: { min: "375px", max: "767px" },
       md: { min: "768px", max: "1023px" },
       lg: { min: "1024px", max: "1279px" },
       xl: { min: "1280px" },
@@ -150,4 +151,4 @@ darkMode:"class",
     },
   },
   plugins: [],
-};
+});

@@ -1,13 +1,14 @@
 import React from "react";
 
-import Hero from "./comps/hero";
-import Nav from './comps/nav';
+import Hero from "./lib/comps/hero";
+import Skills from "./lib/comps/skills";
+
 
 const Page = () => {
   return (
     <main>
-
       <Hero />
+      <Skills/>
     </main>
   );
 };
