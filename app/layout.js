@@ -1,6 +1,8 @@
 import { Josefin_Sans, Montserrat } from "next/font/google";
 import './globals.css'
 import styles from "./style";
+//import Nav from "./lib/comps/nav";
+import Header from "./lib/comps/header";
 import Nav from "./lib/comps/nav";
 
 const josefin_Sans = Josefin_Sans({
@@ -23,14 +25,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-
-        <body
-          className={`${josefin_Sans.variable} ${mont.variable} ${styles.padding} mx-auto max-w-stretch overflow-x-hidden`}
+      <body
+        className={`${josefin_Sans.variable} ${mont.variable} mx-auto max-w-stretch overflow-x-hidden`}
       >
-        <Nav/>
-         {children}
-        </body>
-
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }

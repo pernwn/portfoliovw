@@ -31,7 +31,7 @@ const Hero = () => {
             </h2>
           </CardHeader>
           <CardBody>
-            
+            list
             <Image src="/profile.png" alt="Portrait" layout="fill" objectFit="contain" objectPosition="right" className="grayscale hover:grayscale-0 objTransitions" />
           </CardBody>
           <CardFooter>Footer</CardFooter>

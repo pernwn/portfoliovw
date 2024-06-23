@@ -180,7 +180,7 @@ body {
   }
 
   p{
-    @apply TODO: **TODO - definer flere skriftstørrelser
+    /* **TODO - definer flere skriftstørrelser */
   }
 
 }
@@ -207,7 +207,7 @@ body {
   }
 
   .glassmorph {
-    @apply bg-clip-padding backdrop-filter backdrop-blur-md;
+    @apply bg-clip-padding backdrop-filter backdrop-blur-lg;
   }
 
   .objTransitions{
