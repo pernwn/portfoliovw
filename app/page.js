@@ -7,10 +7,10 @@ import styles from "./style";
 
 const Page = () => {
   return (
-    <main className={`pt-[14%] sm:pt-[32%] ${styles.padding}`}>
+    <>
       <Hero />
       <Skills/>
-    </main>
+    </>
   );
 };
 

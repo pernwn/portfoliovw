@@ -8,22 +8,14 @@ import styles from "@/app/style";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import navItems from "../data/nav";
-
-
+import { BarsIcon, XIcon } from "./ui/icons";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState();
-  const handleOpen = () => {
-    setIsOpen(true)
-  }
-
-  const handleClose = () => {
-    setIsOpen(false)
-  }
 
   const handleClick = () => {
-    setIsOpen(isOpen ? handleClose : handleOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div
@@ -31,7 +23,7 @@ const Nav = () => {
     >
       <a
         href="/"
-        className="flex rounded-full relative w-16 h-16 border-2 border-secondary hover:border-primary objTransitions"
+        className="flex rounded-full relative w-16 h-16 border-2 border-secondary hover:border-primary "
       >
         <Image
           alt="Profile"
@@ -56,29 +48,61 @@ const Nav = () => {
         </Link>
       </div>
 
-      <div className="lg:hidden xl:hidden flex text-right items-center justify-end">
+      <div className="md:hidden lg:hidden xl:hidden flex flex-col text-right items-end">
         <div onClick={handleClick}>
-          {isOpen ? (
-          <FontAwesomeIcon icon={faXmark} size="2x" />
-            
-          ) : (
-              <FontAwesomeIcon icon={faBars} size="2x" />
-            
-          )}
+          <div
+            className={`relative float-right mt-4 space-y-2 items-center transform transition-transform duration-500 ${
+              isOpen ? "rotate-180" : "rotate-0"
+            }`}
+          >
+            <div
+              className={`w-10 h-1 bg-textCol-900 rounded-full transition duration-300 ${
+                isOpen ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <div
+              className={`w-10 h-1 bg-accent rounded-full transform transition-transform duration-300 ${
+                isOpen
+                  ? "rotate-45 translate-x-1 origin-center"
+                  : "rotate-0 translate-x-0"
+              }`}
+            />
+
+            <div
+              className={`w-10 h-1 bg-textCol-900 rounded-full transform transition-transform duration-300 ${
+                isOpen
+                  ? "-rotate-45 translate-x-1 origin-center -translate-y-3"
+                  : "rotate-0 translate-x-0"
+              }`}
+            />
+          </div>
         </div>
-        {isOpen && (
-          <div className="flex justify-center h-fit">
-            <div className="w-full flex flex-col justify-evenly">
-              <div className="flex flex-col">
-                {navItems.map((data, index) => (
-                  <span key={index}>
-                    <LinkButton title={data.title} url={data.url} />
-                  </span>
-                ))}
+
+        <div className={`flex flex-col items-start`}>
+          {isOpen && (
+            <div
+              className={`w-full transition-transform duration-300 animate-slideDown`}
+            >
+              <div className="w-full flex flex-col justify-evenly">
+                <div>
+                  {navItems.map((data, index) => (
+                    <span key={index}>
+                      <LinkButton title={data.title} url={data.url} />
+                    </span>
+                  ))}
+                  <Link
+                    className="objTransitions"
+                    href="mailto:vicwaet@hotmail.com"
+                  >
+                    <p className="leading-none p-med text-[18px] mt-8 btn btn-primary">
+                      Direct Contact
+                    </p>
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
