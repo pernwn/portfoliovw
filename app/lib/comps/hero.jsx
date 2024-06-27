@@ -21,7 +21,7 @@ import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 const Hero = () => {
   return (
     <section
-      className={`flex flex-row sm:flex-col gap-2 ${styles.paddingX} ${styles.marginBottom}`}
+      className={`flex flex-row sm:flex-col gap-2 ${styles.marginBottom}`}
     >
       <div className="flex flex-col w-full h-fit space-y-12 sm:space-y-8">
         <span>
@@ -49,7 +49,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex-auto w-full h-[12rem]">
+      <div className="flex-auto w-fit h-fit">
         <Card className="glassmorph bg-secondary-100 relative group hover:bg-secondary-50 objTransitions overflow-hidden">
           <CardHeader
             floated={false}

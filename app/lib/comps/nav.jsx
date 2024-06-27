@@ -25,7 +25,7 @@ const Nav = () => {
     >
       <a
         href="/"
-        className="flex rounded-full relative w-16 h-16 border-2 border-secondary hover:border-primary "
+        className="flex rounded-full relative w-16 h-16 border-2 border-primary-200 hover:border-primary objTransitions"
       >
         <Image
           alt="Profile"

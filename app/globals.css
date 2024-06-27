@@ -376,7 +376,7 @@ body {
   }
 
   .glassmorph {
-    @apply bg-clip-padding backdrop-filter backdrop-blur-md;
+    @apply bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10;
   }
 
   .objTransitions {

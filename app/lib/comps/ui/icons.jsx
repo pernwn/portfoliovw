@@ -1,5 +1,13 @@
 //Icon list – array
 
+const iconsPng = [
+  {
+    id: 1,
+    title: 'Next.js',
+    src:''
+  }
+]
+
 export const BarsIcon = ({ className }) => (
   <svg
     className={`transform ${className}`}

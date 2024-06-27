@@ -7,10 +7,10 @@ import styles from "./style";
 
 const Page = () => {
   return (
-    <>
+    <section className="flex flex-col space-y-12">
       <Hero />
       <Skills/>
-    </>
+    </section>
   );
 };
 
