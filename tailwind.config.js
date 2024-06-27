@@ -2,7 +2,7 @@
 const withMT = require("@material-tailwind/react/utils/withMT");
 
 module.exports = withMT({
-darkMode:"class",
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -40,6 +40,7 @@ darkMode:"class",
       // accent: 'var(--color-accent)',
 
       primary: {
+        50: "var(--color-primary-50)",
         100: "var(--color-primary-100)",
         200: "var(--color-primary-200)",
         300: "var(--color-primary-300)",
@@ -49,8 +50,10 @@ darkMode:"class",
         700: "var(--color-primary-700)",
         800: "var(--color-primary-800)",
         900: "var(--color-primary-900)",
+        950: "var(--color-primary-950)",
       },
       secondary: {
+        50: "var(--color-secondary-50)",
         100: "var(--color-secondary-100)",
         200: "var(--color-secondary-200)",
         300: "var(--color-secondary-300)",
@@ -60,6 +63,7 @@ darkMode:"class",
         700: "var(--color-secondary-700)",
         800: "var(--color-secondary-800)",
         900: "var(--color-secondary-900)",
+        950: "var(--color-secondary-950)",
       },
       third: {
         100: "var(--color-third-100)",
@@ -73,6 +77,7 @@ darkMode:"class",
         900: "var(--color-third-900)",
       },
       textCol: {
+        50: "var(--color-text-50)",
         100: "var(--color-text-100)",
         200: "var(--color-text-200)",
         300: "var(--color-text-300)",
@@ -82,8 +87,10 @@ darkMode:"class",
         700: "var(--color-text-700)",
         800: "var(--color-text-800)",
         900: "var(--color-text-900)",
+        950: "var(--color-text-950)",
       },
       backgroundCol: {
+        50: "var(--color-background-50)",
         100: "var(--color-background-100)",
         200: "var(--color-background-200)",
         300: "var(--color-background-300)",
@@ -93,8 +100,10 @@ darkMode:"class",
         700: "var(--color-background-700)",
         800: "var(--color-background-800)",
         900: "var(--color-background-900)",
+        950: "var(--color-background-950)",
       },
       accent: {
+        50: "var(--color-accent-50)",
         100: "var(--color-accent-100)",
         200: "var(--color-accent-200)",
         300: "var(--color-accent-300)",
@@ -104,6 +113,7 @@ darkMode:"class",
         700: "var(--color-accent-700)",
         800: "var(--color-accent-800)",
         900: "var(--color-accent-900)",
+        950: "var(--color-accent-950)",
       },
 
       lightShade: {
@@ -146,7 +156,7 @@ darkMode:"class",
       //     "hover",
       //     "focus",
       //   ]}
-      //   
+      //
       // },
     },
   },

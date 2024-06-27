@@ -1,40 +1,90 @@
 "use client";
 import React from "react";
+import styles from "@/app/style";
 
 import {
   Card,
   CardBody,
   CardFooter,
   CardHeader,
+  List,
+  ListItem,
 } from "@material-tailwind/react";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckDouble, faFileArrowDown, faGithub } from "@fortawesome/free-solid-svg-icons";
+import { PrimaryButton, SecondaryButton, SocialsButton } from "./ui/buttons";
+import skillList from '../data/skills';
+
 
 const Hero = () => {
   return (
-    <section className="flex flex-row gap-2 ">
-      <div className="flex-auto w-2/3">
-        <h5>Hello, my name is</h5>
-        <h1 className="leading-[100%] py-2">
-          <span className="text-accent">Victoria</span> Waetthaisong
-        </h1>
-        <h5 className="capitalize">
-          multimedia designer and frontend developer
-        </h5>
+    <section
+      className={`flex flex-row sm:flex-col gap-2 ${styles.paddingX} ${styles.marginBottom}`}
+    >
+      <div className="flex flex-col w-full h-fit space-y-12 sm:space-y-8">
+        <span>
+          <h4>Hello, my name is</h4>
+          <h1 className="leading-[100%] py-2">
+            <span className="text-accent-600">Victoria</span> Waetthaisong
+          </h1>
+          <h4 className="capitalize">
+            multimedia designer and frontend developer
+          </h4>
+        </span>
+
+        <div className="flex align-center gap-4 sm:w-fit sm:justify-between">
+          <PrimaryButton title="Get to know me"/>
+          <SecondaryButton title="Download resume" icon={faFileArrowDown} />
+        </div>
+
+        <div className="flex gap-4 justify-center">
+          <SocialsButton icon={faGithub} />
+          <SocialsButton />
+          <SocialsButton />
+        </div>
       </div>
-      <div className="flex-auto w-1/3">
-        <Card className="glassmorph bg-secondary-800 relative">
-          <CardHeader floated={false} className="bg-transparent">
-            <h5 className="text-xs">About me</h5>
-            <h2 className="text-ss text-textCol">
-              Skilled and passionate <br />
-              <span className="text-accent">Frontend Developer</span>
+
+      <div className="flex-auto w-full h-[12rem]">
+        <Card className="glassmorph bg-secondary-100 relative group hover:bg-secondary-50 objTransitions overflow-hidden">
+          <CardHeader
+            floated={false}
+            className="bg-transparent shadow-none rounded-none"
+          >
+            <h4 className="text-xs">About me</h4>
+            <h2 className="text-ss">
+              <span className="text-accent">Skilled and Passionate</span>
+              <br />
+              Frontend Developer
             </h2>
           </CardHeader>
-          <CardBody>
-            list
-            <Image src="/profile.png" alt="Portrait" layout="fill" objectFit="contain" objectPosition="right" className="grayscale hover:grayscale-0 objTransitions" />
+          <CardBody className="pointer-events-none relative">
+            <div className="w-2/3 sm:w-full">
+              {skillList.map((data, index) => (
+                <List key={index}>
+                  <ListItem>
+                    <span className="place-self-start text-sm sm:text-ss pr-2 text-accent-600">
+                      <FontAwesomeIcon icon={faCheckDouble} />
+                    </span>
+                    <span className="flex flex-col">
+                      <h3>{data.title}</h3>
+                      <p>{data.description}</p>
+                    </span>
+                  </ListItem>
+                </List>
+              ))}
+            </div>
           </CardBody>
-          <CardFooter>Footer</CardFooter>
+          <CardFooter>
+            <Image
+              src="/profile.png"
+              alt="Portrait"
+              width={600}
+              height={600}
+              objectFit="contain"
+              className="grayscale group-hover:grayscale-0 objTransitions -right-36 sm:-right-28 float-right bottom-0 absolute"
+            />
+          </CardFooter>
         </Card>
       </div>
     </section>

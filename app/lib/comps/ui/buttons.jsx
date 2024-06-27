@@ -1,25 +1,35 @@
-'use client'
-import React, { useState } from 'react'
+"use client";
+import React, { useState } from "react";
 import { Button } from "@headlessui/react";
-import Link from 'next/link';
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const PrimaryButton = (props) => {
-  const {title, url} = (props)
+  const { title, url, icon } = props;
   return (
     <a href={url}>
-      <Button className="btn btn-primary">{title}</Button>
+      <Button>
+        <span className="btn btn-primary p-med">
+          {title} <FontAwesomeIcon icon={icon} />
+        </span>
+      </Button>
     </a>
-  )
-}
+  );
+};
 export const SecondaryButton = (props) => {
-  const { title, url } = props;
-  return(
-  <a href={url}>
-    <Button className="btn btn-secondary bg- ">{title}</Button>
-  </a>)
-}
+  const { title, url, icon } = props;
+  return (
+    <a href={url}>
+      <Button>
+        <span className="btn btn-secondary p-med">
+          {title} <FontAwesomeIcon icon={icon} />
+        </span>
+      </Button>
+    </a>
+  );
+};
 
-export const LinkButton = props => {
+export const LinkButton = (props) => {
   const [isHovered, setIsHovered] = useState(false);
   const { title, url } = props;
   return (
@@ -30,18 +40,24 @@ export const LinkButton = props => {
       href={url}
     >
       <p
-        className={`cursor-pointer ${
+        className={`cursor-pointer text-ss md:text-xs sm:text-sm sm:relative sm: sm:after:block sm:after:h-[2px] sm:after:rounded sm:after:right-0 sm:after:bg-gradient-to-l sm:after:from-accent-600 sm:after:bg-no-repeat sm:after:scale-x-100 sm:before:origin-bottom-right sm:text-right ${
           isHovered
-            ? "text-textCol relative before:content-[''] before:absolute before:block before:w-full before:h-[3px] before:rounded before:bottom-0 before:left-0 before:bg-gradient-to-r before:from-accent-600 before:bg-no-repeat before:hover:scale-x-100 before:origin-bottom-left before:transition-all before:ease-linear before:duration-300"
-            : "text-textCol-700 before:scale-x-0"
+            ? "text-textCol-700 p-med relative before:content-[''] before:absolute before:block before:w-full before:h-[3px] before:rounded before:-bottom-2 before:left-0 before:bg-gradient-to-r before:from-accent-600 before:bg-no-repeat before:hover:scale-x-100 before:origin-bottom-left before:transition-all before:ease-linear before:duration-300"
+            : "text-textCol p-med before:scale-x-0"
         }`}
       >
         {title}
       </p>
     </Link>
   );
-}
+};
 
+export const SocialsButton = (props) => {
+  const { url, icon } = props;
 
-
-
+  return (
+    <a href={url}>
+      <Button className="bg-primary"><FontAwesomeIcon icon={icon} size="lg" className="text-accent"/></Button>
+    </a>
+  );
+};
