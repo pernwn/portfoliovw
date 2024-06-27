@@ -32,14 +32,22 @@ export const SecondaryButton = (props) => {
 export const LinkButton = (props) => {
   const [isHovered, setIsHovered] = useState(false);
   const { title, url } = props;
+
+   const handleClick = () => {
+     if (onClick) {
+       onClick(); // Kald onClick prop hvis det er defineret
+     }
+   };
+
   return (
     <Link
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="btn-links"
       href={url}
+      onClick={handleClick}
     >
-      <p
+      <p 
         className={`cursor-pointer text-ss md:text-xs sm:font-light sm:text-textCol-800 sm:text-sm sm:relative sm: sm:after:block sm:after:h-[2px] sm:after:rounded sm:after:right-0 sm:after:bg-gradient-to-l sm:after:from-accent-600 sm:after:bg-no-repeat sm:after:scale-x-100 sm:before:origin-bottom-right sm:text-right ${
           isHovered
             ? "text-textCol-700 p-med relative before:content-[''] before:absolute before:block before:w-full before:h-[3px] before:rounded before:-bottom-2 before:left-0 before:bg-gradient-to-r before:from-accent-600 before:bg-no-repeat before:hover:scale-x-100 before:origin-bottom-left before:transition-all before:ease-linear before:duration-300"
@@ -57,7 +65,7 @@ export const SocialsButton = (props) => {
 
   return (
     <a href={url}>
-      <Button className="bg-primary"><FontAwesomeIcon icon={icon} size="lg" className="text-accent"/></Button>
+      <Button className="bg-primary-300 p-2 my-2 rounded-md w-10 h-10 hover:bg-primary group objTransitions"><FontAwesomeIcon icon={icon} size="xl" className="text-accent group-hover:text-accent-900"/></Button>
     </a>
   );
 };

@@ -5,10 +5,8 @@ import React, { useState } from "react";
 import { LinkButton } from "./ui/buttons";
 import Image from "next/image";
 import styles from "@/app/style";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import navItems from "../data/nav";
-import { BarsIcon, XIcon } from "./ui/icons";
+import { useRouter } from "next/router";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState();
@@ -16,6 +14,10 @@ const Nav = () => {
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
+
+  const handlePageLoad = () => {
+    setIsOpen(false);
+  }
 
   return (
     <div
@@ -87,7 +89,7 @@ const Nav = () => {
                 <div>
                   {navItems.map((data, index) => (
                     <span key={index}>
-                      <LinkButton title={data.title} url={data.url} />
+                      <LinkButton title={data.title} url={data.url} onClick={handlePageLoad} />
                     </span>
                   ))}
                   <Link

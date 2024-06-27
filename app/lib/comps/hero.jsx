@@ -12,9 +12,10 @@ import {
 } from "@material-tailwind/react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckDouble, faFileArrowDown, faGithub } from "@fortawesome/free-solid-svg-icons";
+import { faCheckDouble, faEnvelope, faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { PrimaryButton, SecondaryButton, SocialsButton } from "./ui/buttons";
 import skillList from '../data/skills';
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 
 const Hero = () => {
@@ -34,14 +35,17 @@ const Hero = () => {
         </span>
 
         <div className="flex align-center gap-4 sm:w-fit sm:justify-between">
-          <PrimaryButton title="Get to know me"/>
+          <PrimaryButton title="Get to know me" />
           <SecondaryButton title="Download resume" icon={faFileArrowDown} />
         </div>
 
-        <div className="flex gap-4 justify-center">
-          <SocialsButton icon={faGithub} />
-          <SocialsButton />
-          <SocialsButton />
+        <div className="flex gap-4 justify-start pb-8">
+          <SocialsButton
+            icon={faLinkedinIn}
+            url="https://www.linkedin.com/in/vicwjohansen/"
+          />
+          <SocialsButton icon={faGithub} url="https://github.com/pernwn" />
+          <SocialsButton icon={faEnvelope} url="mailto:vicwaet@hotmail.com" />
         </div>
       </div>
 
@@ -59,14 +63,14 @@ const Hero = () => {
             </h2>
           </CardHeader>
           <CardBody className="pointer-events-none relative">
-            <div className="w-2/3 sm:w-full">
+            <div className="w-2/3 clear-right">
               {skillList.map((data, index) => (
                 <List key={index}>
                   <ListItem>
                     <span className="place-self-start text-sm sm:text-ss pr-2 text-accent-600">
                       <FontAwesomeIcon icon={faCheckDouble} />
                     </span>
-                    <span className="flex flex-col">
+                    <span className="flex flex-col w-fit">
                       <h3>{data.title}</h3>
                       <p>{data.description}</p>
                     </span>
@@ -79,10 +83,10 @@ const Hero = () => {
             <Image
               src="/profile.png"
               alt="Portrait"
-              width={600}
-              height={600}
+              width={500}
+              height={500}
               objectFit="contain"
-              className="grayscale group-hover:grayscale-0 objTransitions -right-36 sm:-right-28 float-right bottom-0 absolute"
+              className="grayscale group-hover:grayscale-0 objTransitions -right-36 sm:-right-28 float-right bottom-0 absolute z-1"
             />
           </CardFooter>
         </Card>
