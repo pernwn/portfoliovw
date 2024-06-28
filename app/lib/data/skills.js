@@ -1,8 +1,21 @@
-import { faCss3, faElementor, faFigma, faHtml5, faJs, faReact } from "@fortawesome/free-brands-svg-icons";
+import {
+  faCss3,
+  faElementor,
+  faFigma,
+  faHtml5,
+  faJs,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 
-export const skillList = [
+import nextjs from "@/app/lib/assets/png-icons/nextjs-logo.png"
+import photoshop from "@/app/lib/assets/svg/photoshop.svg"
+
+
+const skillList = [
   {
+    id: 1,
     title: "Teknisk",
     description:
       "Med HTML, CSS, JS (ES6+) og frameworks som React og Next.js kan jeg bygge brugervenlige og responsive websider.",
@@ -10,56 +23,56 @@ export const skillList = [
   {
     id: 2,
     title: "Brugerfokuseret",
-    description: "erfaring",
+    description: "Erfaring",
   },
   {
     id: 3,
     title: "Kreativ",
-    description: "erfaring",
+    description: "Erfaring",
   },
 ];
 
-export const skillIcons = [
+const skillIcons = [
   {
     title: "HTML",
-    icon: <FontAwesomeIcon icon={faHtml5} />,
+    icon: faHtml5,
   },
   {
     title: "CSS",
-    icon: <FontAwesomeIcon icon={faCss3} />,
+    icon: faCss3,
   },
   {
-    title: "Javascript",
-    icon: <FontAwesomeIcon icon={faJs} />,
+    title: "JavaScript",
+    icon: faJs,
   },
   {
     title: "React",
-    icon: <FontAwesomeIcon icon={faReact} />,
+    icon: faReact,
   },
   {
     title: "Next.js",
-    icon: "url('/app/lib/assets/png-icons/nextjs-logo.png')",
+    icon: '/app/lib/assets/png-icons/nextjs-logo.png',
   },
   {
     title: "TailwindCSS",
-    icon: "url('/app/lib/assets/png-icons/tailwindcss-logo.png')",
+    icon: "/@/app/lib/assets/png-icons/tailwindcss-logo.png",
   },
-
   {
     title: "Elementor",
-    icon: <FontAwesomeIcon icon={faElementor} />,
+    icon: faElementor,
   },
   {
     title: "Figma",
-    icon: <FontAwesomeIcon icon={faFigma} />,
+    icon: faFigma,
   },
   {
     title: "Procreate",
-    icon: "url('/app/lib/assets/png-icons/procreate-logo.png')",
+    icon: "/@/app/lib/assets/png-icons/procreate-logo.png",
   },
   {
     title: "Adobe Photoshop",
-    icon: "url('/app/lib/assets/png-icons/photoshop-logo.png')",
+    icon: { photoshop },
   },
 ];
 
+export { skillList, skillIcons };

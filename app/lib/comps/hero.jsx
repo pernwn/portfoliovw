@@ -14,8 +14,9 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckDouble, faEnvelope, faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { PrimaryButton, SecondaryButton, SocialsButton } from "./ui/buttons";
-import skillList from '../data/skills';
+
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { skillList } from "../data/skills";
 
 
 const Hero = () => {
