@@ -6,11 +6,9 @@ import {
   faJs,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
 
-import nextjs from "@/app/lib/assets/png-icons/nextjs-logo.png"
-import photoshop from "@/app/lib/assets/svg/photoshop.svg"
+//import nextjs from "@/app/lib/assets/png-icons/nextjs-logo.png"
+import { NextjsIcon, PhotoshopIcon, ProcreateIcon, TailwindCssIcon } from "../comps/ui/icons";
 
 
 const skillList = [
@@ -51,11 +49,11 @@ const skillIcons = [
   },
   {
     title: "Next.js",
-    icon: '/app/lib/assets/png-icons/nextjs-logo.png',
+    icon: <NextjsIcon />,
   },
   {
     title: "TailwindCSS",
-    icon: "/@/app/lib/assets/png-icons/tailwindcss-logo.png",
+    icon: <TailwindCssIcon/>,
   },
   {
     title: "Elementor",
@@ -67,11 +65,11 @@ const skillIcons = [
   },
   {
     title: "Procreate",
-    icon: "/@/app/lib/assets/png-icons/procreate-logo.png",
+    icon: <ProcreateIcon/>,
   },
   {
-    title: "Adobe Photoshop",
-    icon: { photoshop },
+    title: "Photoshop",
+    icon: <PhotoshopIcon/>,
   },
 ];
 

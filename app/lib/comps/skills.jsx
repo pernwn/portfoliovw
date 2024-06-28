@@ -1,45 +1,20 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { FieldCard } from "./ui/cards";
+import { DynamicColorH3, FieldCard } from "./ui/cards";
 import { faCode, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faFigma } from "@fortawesome/free-brands-svg-icons";
-import { SocialsButton } from "./ui/buttons";
 import styles from "@/app/style";
 
 import { skillIcons } from "../data/skills";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
-const DynamicColorH3 = ({ title, text }) => {
-  const h3Ref = useRef(null);
 
-  useEffect(() => {
-    const h3 = h3Ref.current;
-    if (h3) {
-      const words = h3.innerText.split(" ");
-      if (words.length > 1) {
-        const lastWords = words.slice(-2).join(" ");
-        const firstPart = words.slice(0, -2).join(" ");
 
-        h3.innerHTML = `${firstPart} <span class="text-accent">${lastWords}</span>`;
-      }
-    }
-  }, [title]);
-
-  return (
-    <div>
-      <h3 ref={h3Ref} className="dynamic-color">
-        {title}
-      </h3>
-      <p>{text}</p>
-    </div>
-  );
-};
-
+export const IconSize = 38;
 const Skills = () => {
   return (
-    <section className="space-y-20">
-      <div className="flex gap-12 sm:flex-col sm:gap-8">
+    <section className="space-y-8 w-full">
+      <div className="flex gap-12 sm:flex-col sm:gap-8 justify-center">
         <FieldCard
           icon={faCode}
           title="Web Development"
@@ -56,30 +31,33 @@ const Skills = () => {
           content="Lorem ipsum dolor sit amet consectetur. Orci diam vestibulum amet venenatis ut. Mauris senectus ut porttitor massa convallis arcu in lacus sit."
         />
       </div>
+     
       <div className={`${styles.flexCenter} flex-col`}>
         <span>
           <DynamicColorH3
-            title="My professional toolbox"
+            heading="Tools"
+            title="A developers toolkit"
             text="Lorem ipsum dolor sit amet consectetur. Orci diam vestibulum amet venenatis ut."
           />
         </span>
 
-        <div className="grid grid-rows-2 grid-cols-5 xl:grid-cols-4 xl:w-2/3 gap-4 items-center justify-items-center w-full h-full">
+        <div className="flex gap-2 sm:overflow-x-auto sm:gap-4 xl:w-3/4 w-[125%] px-14 xl:grid xl:grid-rows-2 xl:grid-cols-5 xl:gap-8 items-center justify-items-center h-full">
           {skillIcons.map((data, index) => (
             <div
               key={index}
-              className="bg-primary-200 text-accent flex justify-center items-center rounded-md w-12 h-12 xl:w-16 xl:h-16 p-2"
+              className="bg-primary-100 group hover:bg-secondary-100 objTransitions rounded-md flex flex-wrap flex-col justify-center gap-2 items-center p-4 xl:p-2 xl:w-32 xl:h-32"
             >
-              {typeof data.icon === "string" ? (
-                <Image
-                  src={data.icon}
-                  alt={`${data.title} logo`}
-                  width={24}
-                  height={24}
-                />
-              ) : (
-                <FontAwesomeIcon icon={data.icon} size="xl" />
-              )}
+              <div className="text-accent group-hover:text-accent-900">
+                {React.isValidElement(data.icon) ? (
+                  React.cloneElement(data.icon, { width: IconSize, height: IconSize })
+                ) : (
+                  <FontAwesomeIcon
+                    icon={data.icon}
+                    style={{ width: IconSize, height: IconSize }}
+                  />
+                )}
+              </div>
+              <p className="p-med text-center group-hover:text-accent-900 xl:flex hidden">{data.title}</p>
             </div>
           ))}
         </div>

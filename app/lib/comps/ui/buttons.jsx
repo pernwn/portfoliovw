@@ -65,7 +65,7 @@ export const SocialsButton = (props) => {
 
   return (
     <a href={url}>
-      <Button className="bg-primary-300 p-2 my-2 rounded-md w-10 h-10 hover:bg-primary group objTransitions"><FontAwesomeIcon icon={icon} size="xl" className="text-accent group-hover:text-accent-900"/></Button>
+      <Button className="bg-primary-100 p-2 my-2 rounded-md w-12 h-12 border border-transparent hover:bg-secondary-100 hover:border-accent group objTransitions"><FontAwesomeIcon icon={icon} size="xl" className="text-accent group-hover:text-accent-900"/></Button>
     </a>
   );
 };

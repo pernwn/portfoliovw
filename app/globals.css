@@ -352,7 +352,7 @@ body {
 
 @layer components {
   .btn {
-    @apply sm:px-2 sm:py-4 gap-2 rounded-lg p-4 text-center capitalize text-textCol-800 tracking-wider cursor-pointer
+    @apply sm:px-2 sm:py-4 gap-2 flex flex-wrap justify-center items-center rounded-lg p-4 text-center capitalize text-textCol-800 tracking-wider cursor-pointer
     sm:text-[14px]
     md:text-[16px]
     lg:text-[18px]

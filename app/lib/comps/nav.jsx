@@ -21,11 +21,11 @@ const Nav = () => {
 
   return (
     <div
-      className={`${styles.padding} inline-grid grid-cols-2 light:bg-lightShade-500 dark:bg-darkShade-500 bg-opacity-80 glassmorph w-full h-fit fixed z-50`}
+      className={`${styles.paddingX} py-4 xl:py-8 inline-grid grid-cols-2 light:bg-lightShade-500 dark:bg-darkShade-500 bg-opacity-80 glassmorph w-full h-fit fixed z-50`}
     >
       <a
         href="/"
-        className="flex rounded-full relative w-16 h-16 border-2 border-primary-200 hover:border-primary objTransitions"
+        className="flex rounded-full relative w-14 h-14 xl:w-16 xl:h-16 border-2 border-primary-200 hover:border-primary objTransitions"
       >
         <Image
           alt="Profile"

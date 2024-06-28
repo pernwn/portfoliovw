@@ -1,20 +1,16 @@
-/* 
-Denne kode definerer styling- og layoutvariabler for at gøre det nemt 
-at opretholde en konsistent visuel æstetik på tværs af forskellige sektioner og komponenter på websitet */
-
 const styles = {
   boxWidth: "xl:max-w-[1280px] w-full",
 
   flexCenter: "flex justify-center items-center",
   flexStart: "flex justify-center items-start",
 
-  paddingX: "sm:px-2 px-20",
-  paddingY: "sm:py-4 py-6",
-  padding: "sm:px-4 px-20 sm:py-6 py-8",
+  paddingX: "sm:px-6 px-16",
+  paddingY: "sm:py-6 py-16",
+  padding: "sm:px-8 px-16 sm:py-8 py-16",
 
-  marginX: "sm:mx-16 mx-6",
-  marginY: "sm:my-16 my-6",
-  margin: "sm:mx-16 mx-8 sm:my-16 my-8",
+  marginX: "sm:mx-6 mx-16",
+  marginY: "sm:my-6 my-16",
+  margin: "sm:mx-8 mx-16 sm:my-8 my-16",
 };
 
 export const layout = {

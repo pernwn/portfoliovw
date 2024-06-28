@@ -22,9 +22,9 @@ import { skillList } from "../data/skills";
 const Hero = () => {
   return (
     <section
-      className={`flex flex-row sm:flex-col gap-2 ${styles.marginBottom}`}
+      className={`flex xl:flex-row flex-col xl:gap-8 xl:px-4 px-2 ${styles.marginBottom}`}
     >
-      <div className="flex flex-col w-full h-fit space-y-12 sm:space-y-8">
+      <div className="flex flex-col xl:w-1/2 h-fit space-y-8">
         <span>
           <h4>Hello, my name is</h4>
           <h1 className="leading-[100%] py-2">
@@ -35,9 +35,9 @@ const Hero = () => {
           </h4>
         </span>
 
-        <div className="flex align-center gap-4 sm:w-fit sm:justify-between">
+        <div className="flex gap-4 sm:w-fit sm:justify-between">
           <PrimaryButton title="Get to know me" />
-          <SecondaryButton title="Download resume" icon={faFileArrowDown} />
+          <SecondaryButton title="My resume" icon={faFileArrowDown} />
         </div>
 
         <div className="flex gap-4 justify-start pb-8">
@@ -45,13 +45,13 @@ const Hero = () => {
             icon={faLinkedinIn}
             url="https://www.linkedin.com/in/vicwjohansen/"
           />
-          <SocialsButton icon={faGithub} url="https://github.com/pernwn" />
-          <SocialsButton icon={faEnvelope} url="mailto:vicwaet@hotmail.com" />
+          <SocialsButton icon={faGithub} url="https://github.com/pernwn"/>
+          <SocialsButton icon={faEnvelope} url="mailto:vicwaet@hotmail.com"/>
         </div>
       </div>
 
-      <div className="flex-auto w-fit h-fit">
-        <Card className="glassmorph bg-secondary-100 relative group hover:bg-secondary-50 objTransitions overflow-hidden">
+      <div className="flex-auto xl:w-1/2 h-fit">
+        <Card className="glassmorph bg-primary-100 relative group hover:bg-secondary-100 objTransitions overflow-hidden">
           <CardHeader
             floated={false}
             className="bg-transparent shadow-none rounded-none"

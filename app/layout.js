@@ -26,10 +26,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${josefin_Sans.variable} ${mont.variable} mx-auto max-w-stretch overflow-x-hidden`}
       >
-        <main >
-          <Nav />
-          <section className={`pt-[14%] sm:pt-[32%] ${styles.padding}`}>{children}</section>
-          
+        <Nav />
+        <main className={`${styles.padding}`}>
+          <section className={`pt-[22%] md:pt-[4%] lg:pt-[4%] xl:pt-[8%] overflow-x-hidden`}>
+            {children}
+          </section>
         </main>
       </body>
     </html>
