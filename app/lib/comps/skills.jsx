@@ -45,7 +45,7 @@ const Skills = () => {
           {skillIcons.map((data, index) => (
             <div
               key={index}
-              className="bg-primary-100 group hover:bg-secondary-100 objTransitions rounded-md flex flex-wrap flex-col justify-center gap-2 items-center p-4 xl:p-2 xl:w-32 xl:h-32"
+              className="bg-primary-100 group hover:bg-secondary-100 objTransitions rounded-md flex flex-wrap flex-col justify-center gap-2 items-center p-4 w-20 h-20 xl:p-2 xl:w-32 xl:h-32"
             >
               <div className="text-accent group-hover:text-accent-900">
                 {React.isValidElement(data.icon) ? (
