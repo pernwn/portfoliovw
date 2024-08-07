@@ -22,7 +22,7 @@ export const SecondaryButton = (props) => {
     <a href={url}>
       <Button>
         <span className="btn btn-secondary p-med">
-          {title} <FontAwesomeIcon icon={icon} />
+          {title} <FontAwesomeIcon icon={icon} fixedWidth/>
         </span>
       </Button>
     </a>

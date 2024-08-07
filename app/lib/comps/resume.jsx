@@ -2,7 +2,7 @@
 
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { resume } from "../data/resume";
-import { DynamicColorH3 } from "./ui/cards";
+import { DynamicColorH3, PicCard } from "./ui/cards";
 import Image from "next/image";
 
 export default function Resume() {
@@ -21,29 +21,31 @@ export default function Resume() {
               </Tab>
             ))}
           </TabList>
-          <TabPanels className="mt-3">
+          <TabPanels className="mt-8 w-[100vw]">
+            <PicCard pic="/assets/images/stock1.jpg"/>
+
             {resume.map(({ label, posts }) => (
               <TabPanel key={label} className="rounded-xl bg-white/5 p-3 w-2/3">
                 <ul>
                   {posts.map((post) => (
                     <li
                       key={post.id}
-                      className="relative rounded-md p-3 text-sm/6 transition hover:bg-white/5"
+                      className="relative rounded-md p-3 text-sm/6 transition hover:bg-white/5 group"
                     >
                       <a href="#" className="font-semibold text-white flex">
                         <span className="absolute inset-0" />
-                        <div>
-
+                        <div className="flex flex-col border-b-2 border-primary-200 rounded-md p-4 group-hover:border-transparent">
                           <h3>{post.title}</h3>
                           <p>{post.description}</p>
                         </div>
+                        
 
-                        <Image
-                         layout="fill"
+                        {/* <Image
+                          layout="fill"
                           objectFit="contain"
                           alt={posts.title}
                           src="/profile.png"
-                        />
+                        /> */}
                       </a>
                       {/* <ul 
                         className="flex gap-2 text-white/50"

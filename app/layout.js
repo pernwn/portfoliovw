@@ -1,7 +1,10 @@
-import { Josefin_Sans, Montserrat } from "next/font/google";
+
 import "./globals.css";
 import styles from "./style";
 import Nav from "./lib/comps/nav";
+import { Josefin_Sans } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
+
 
 const josefin_Sans = Josefin_Sans({
   weight: "variable",
