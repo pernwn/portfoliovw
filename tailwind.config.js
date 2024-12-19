@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const { default: gradient } = require('@material-tailwind/react/theme/components/timeline/timelineIconColors/gradient');
 const withMT = require("@material-tailwind/react/utils/withMT");
 
 module.exports = withMT({
@@ -29,7 +30,7 @@ module.exports = withMT({
 
     fontFamily: {
       display: ["Josefin Sans", "sans-serif"],
-      body: ["Montserrat", "sans-serif"],
+      body: ["Josefin Sans", "sans-serif"],
     },
 
     colors: {
@@ -162,6 +163,10 @@ module.exports = withMT({
       animation: {
         slideDown: "slideDown 0.5s ease-out forwards",
         slideUp: "slideUp 0.5s ease-out forwards"
+      },
+
+      gradient: {
+        gradToB: "from-current to-transparent",
       },
 
       // variants: {

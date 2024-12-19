@@ -26,7 +26,8 @@ export const resume = [
         id: 1,
         title: "User-Centered Design Project",
         description: "Conducted user research and usability testing to design a mobile application that improves user engagement and accessibility. This project resulted in a more intuitive and user-friendly app interface.",
-        skills: ["User Research", "Usability Testing", "Prototyping", "Figma"]
+        skills: ["User Research", "Usability Testing", "Prototyping", "Figma"],
+        tools: ["Figma", "Miro"]
       },
       {
         id: 2,
