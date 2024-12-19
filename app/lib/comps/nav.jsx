@@ -21,7 +21,7 @@ const Nav = () => {
 
   return (
     <div
-      className={`${styles.paddingX} py-4 xl:py-8 inline-grid grid-cols-2 light:bg-lightShade-500 dark:bg-darkShade-500 bg-opacity-80 glassmorph w-full h-fit fixed z-50`}
+      className={`${styles.paddingX} py-4 xl:py-8 inline-grid grid-cols-2 light:bg-lightShade-500 dark:bg-darkShade-500 glassmorph w-full h-fit fixed z-50`}
     >
       <a
         href="/"
@@ -39,12 +39,12 @@ const Nav = () => {
       <div className="flex justify-between items-center w-full h-fit sm:hidden">
         {navItems.map((data, index) => (
           <span key={index}>
-            <LinkButton title={data.title} url={data.url} />
+            <LinkButton title={data.title} url={data.url}/>
           </span>
         ))}
 
         <Link className="objTransitions" href="mailto:vicwaet@hotmail.com">
-          <p className="leading-none text-accent-600 p-med btn btn-secondary">
+          <p className="leading-none p-med btn btn-primary">
             Direct Contact
           </p>
         </Link>

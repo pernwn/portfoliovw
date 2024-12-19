@@ -197,7 +197,7 @@
     --color-accent-800: #0e4034;
     --color-accent-900: #07201a; */
 
-        --color-third-100: #d0ced2;
+    --color-third-100: #d0ced2;
     --color-third-200: #a29da5;
     --color-third-300: #736d78;
     --color-third-400: #453c4b;
@@ -218,7 +218,6 @@
     --color-text-800: #332a3c;
     --color-text-900: #19151e;
     --color-text-950: #0d0b0f;
-
 
     --color-background-50: #f2edf8;
     --color-background-100: #e5dbf0;
@@ -296,19 +295,17 @@ body {
   }
 
   h3 {
-    @apply 
-    sm:text-[20px] 
+    @apply sm:text-[20px] 
     md:text-[24px] 
     lg:text-[28px] lg:leading-[100%] 
     xl:text-[28px] xl:leading-[120%]
     text-textCol-900
     capitalize
-    font-display
+    font-display;
   }
 
   h4 {
-    @apply 
-    sm:text-[14px] sm:leading-[130%]
+    @apply sm:text-[14px] sm:leading-[130%]
     md:text-[14px]  
     lg:text-[16px] 
     xl:text-[20px] 
@@ -319,7 +316,6 @@ body {
     tracking-wider
     leading-[200%]
     text-textCol-800;
-    
   }
 
   .p-med {
@@ -352,7 +348,7 @@ body {
 
 @layer components {
   .btn {
-    @apply sm:px-2 sm:py-4 gap-2 flex flex-wrap justify-center items-center rounded-lg p-4 text-center capitalize text-textCol-800 tracking-wider cursor-pointer
+    @apply sm:px-2 sm:py-4 gap-2 flex flex-wrap justify-center items-center rounded-lg p-4 text-center capitalize text-textCol-800 tracking-wider hover:cursor-pointer
     sm:text-[14px]
     md:text-[16px]
     lg:text-[18px]
@@ -360,15 +356,15 @@ body {
   }
 
   .btn:hover {
-    @apply sm:px-2 sm:py-4 bg-accent-400 p-4 text-primary-950 transition ease-in-out duration-300 cursor-pointer;
+    @apply sm:px-2 sm:py-4 bg-accent-400 p-4 text-accent-800 transition ease-in-out duration-300 cursor-pointer;
   }
 
   .btn-secondary {
-    @apply ring-inset ring-2 hover:ring-2 ring-accent-600 text-accent-600 h-fit;
+    @apply ring-inset ring-1 hover:ring-1 hover:bg-secondary-100 hover:text-secondary-800 ring-secondary-600 text-secondary-600 h-fit;
   }
 
   .btn-primary {
-    @apply bg-accent-600 text-primary-50 w-fit;
+    @apply bg-accent text-secondary-50 w-fit;
   }
 
   .btn-links {
@@ -376,7 +372,11 @@ body {
   }
 
   .glassmorph {
-    @apply bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10;
+    @apply bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-20;
+  }
+
+  .glassmorph-fade-b{
+    @apply bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-0
   }
 
   .objTransitions {

@@ -51,7 +51,7 @@ const Hero = () => {
       </div>
 
       <div className="flex-auto xl:w-1/2 h-fit">
-        <Card className="glassmorph bg-primary-100 relative group hover:bg-secondary-100 objTransitions overflow-hidden">
+        <Card className="glassmorph bg-secondary-100 relative group ring-1 ring-secondary-100 hover:ring-accent objTransitions overflow-hidden">
           <CardHeader
             floated={false}
             className="bg-transparent shadow-none rounded-none"
