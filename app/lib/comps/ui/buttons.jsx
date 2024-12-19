@@ -47,7 +47,7 @@ export const LinkButton = (props) => {
       onMouseLeave={() => setIsHovered(false)}
       className="btn-links"
       href={url}
-      target="_blank"
+     
     >
       <p 
         className={`cursor-pointer text-ss md:text-xs sm:font-light sm:text-textCol-800 sm:text-sm sm:relative sm: sm:after:block sm:after:h-[2px] sm:after:rounded sm:after:right-0 sm:after:bg-gradient-to-l sm:after:from-accent-600 sm:after:bg-no-repeat sm:after:scale-x-100 sm:before:origin-bottom-right sm:text-right ${

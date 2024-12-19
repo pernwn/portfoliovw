@@ -43,7 +43,7 @@ const Nav = () => {
           </span>
         ))}
 
-        <Link className="objTransitions" href="mailto:vicwaet@hotmail.com">
+        <Link className="objTransitions" href="mailto:vicwaet@hotmail.com" target="_blank">
           <p className="leading-none p-med btn btn-primary">
             Direct Contact
           </p>
